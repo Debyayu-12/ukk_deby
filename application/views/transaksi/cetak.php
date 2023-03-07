@@ -68,31 +68,50 @@
                 </td>
             </tr>
             </tr>
-        </table><br><br>
+        </table>
+
+        <table width="700">
+
+        <tr>
+            <td>Kode Invoice :</td>
+            <td class="text"><?= $transaksi['kode_invoice'] ?></td>
+        </tr>
+        <!-- <tr> 
+            <td>Nama Member :</td>
+            <td class="text"><?= $member['nama'] ?></td>
+         </tr> -->
+
+         <tr>
+            <td>Tanggal Masuk :</td>
+            <td class="text"><?= $transaksi['tgl'] ?></td>
+        </tr>
+        <tr>
+            <td>Tanggal Ambil :</td>
+            <td class="text"><?= $transaksi['tgl_bayar'] ?></td>
+        </tr>
+    </table><br>
 
 
         <table width="700" class="tabel">
             <tr>
-                <th class="tabel text-center">Id Member</th>
-                <th class="tabel text-center">Tanggal Masuk</th>
-                <th class="tabel text-center">Nama Member</th>
-                <th class="tabel text-center">Total Bayar</th>
+                <th class="tabel text-center">Nama Paket</th>
+                <th class="tabel text-center">Harga</th>
+                <th class="tabel text-center">QTY</th>
                 <th class="tabel text-center">Status Pembayaran</th>
-                <th class="tabel text-center">Tanggal Ambil</th>
+                <th class="tabel text-center">Total Bayar</th>
             </tr>
 
             <tr>
-                <td class="tabel"><?= $transaksi['id_member'] ?></td>
-                <td class="tabel"><?= $transaksi['tgl'] ?></td>
-                <td class="tabel"><?= $transaksi['nama'] ?></td>
-                <td class="tabel"><?= "Rp. " . number_format($transaksi['total_bayar']) ?></td>
-                <td class="tabel"><?= $transaksi['dibayar'] ?></td>
-                <td class="tabel"><?= $transaksi['tgl_bayar'] ?></td>
+                <td class="tabel text-center"><?= $transaksi['nama_paket'] ?></td>
+                <td class="tabel text-center"><?= $transaksi['harga'] ?></td>
+                <td class="tabel text-center"><?= $transaksi['qty'] ?></td>
+                <td class="tabel text-center"><?= $transaksi['dibayar'] ?></td>
+                <td class="tabel text-center"><?= "Rp. " . number_format($transaksi['total_harga']) ?></td>
             </tr>
 
         </table><br>
 
-        <table>
+        <table width="700">
             <tr>
                 <td>Keterangan</td>
             </tr>
